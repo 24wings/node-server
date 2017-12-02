@@ -295,7 +295,7 @@ var version = 'v0.4.7',
                         console.log("cmd:", cmd + "\n");
                         if (opts.verbose)
                             console.log('Running: ' + cmd);
-
+                        console.log(cmd);
                         var report = [],
 
                             execute = proc(cmd, function exe(err, stdout, stderr) {

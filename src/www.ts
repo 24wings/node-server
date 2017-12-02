@@ -7,8 +7,8 @@ import pug = require('pug');
 import path = require('path');
 import services = require('./Services');
 import { Route } from './Core';
-import './lib';
-import './lib/Nmap/nmap'
+// import './lib';
+// import './lib/Nmap/nmap' 
 import allRouters = require('./Routers')
 
 
@@ -16,10 +16,10 @@ let routes = Route.RouteBuilder.scannerRoutes(path.resolve(__dirname, './Control
 
 
 var router = new Router();
-router.get('/', (ctx) => {
+// router.get('/', (ctx) => {
 
-  ctx.body = ctx.query.echostr
-});
+//   ctx.body = ctx.query.echostr
+// });
 //zAC178AvIbBGTJezdrtuvHMco7nYDMa2LNn5eHEFeSM
 router.post('/admin.login', (ctx) => {
   var result = ctx.request.body.username == 'moon' && ctx.request.body.password == 'moon';
