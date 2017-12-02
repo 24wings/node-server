@@ -1,0 +1,69 @@
+{
+    "name": "koa-share",
+    "version": "0.1.1",
+    "requires": true,
+    "lockfileVersion": 1,
+    "jest": {
+        "transform": {
+            "^.+\\.tsx?$": "ts-jest"
+        },
+        "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+        "moduleFileExtensions": [
+            "ts",
+            "tsx",
+            "js",
+            "jsx",
+            "json"
+        ]
+    },
+    "scripts": {
+        "dev": "gulp",
+        "start": "nodemon dist/www.js &&tsc -w  ",
+        "test": "jest",
+        "apidoc": "apidoc  -i src/  -o public/apidoc/",
+        "jsdoc": "node_modules/.bin/jsdoc -c jsdoc.json"
+    },
+    "dependencies": {
+        "@types/koa": "^2.0.41",
+        "@types/koa-bodyparser": "^3.0.26",
+        "@types/koa-pug": "^3.0.3",
+        "@types/koa-router": "^7.0.25",
+        "@types/koa-static": "^3.0.2",
+        "@types/koa-views": "^2.0.3",
+        "@types/md5": "^2.1.32",
+        "@types/node": "^8.0.53",
+        "@types/pug": "^2.0.4",
+        "@types/reflect-metadata": "0.0.5",
+        "@types/request": "^2.0.8",
+        "@types/xml2js": "^0.4.2",
+        "cwebp": "^2.0.2",
+        "gulp-nodemon": "^2.2.1",
+        "koa": "^2.4.1",
+        "koa-bodyparser": "^4.2.0",
+        "koa-pug": "^3.0.0-2",
+        "koa-router": "^7.3.0",
+        "koa-static": "^4.0.2",
+        "koa-views": "^6.1.2",
+        "libnmap": "^0.4.7",
+        "marked": "^0.3.6",
+        "md5": "^2.2.1",
+        "node-libnmap": "^0.2.15",
+        "pug": "^2.0.0-rc.4",
+        "reflect-metadata": "^0.1.10",
+        "request": "^2.83.0",
+        "typescript": "^2.6.1",
+        "urlencode": "^1.1.0",
+        "wechat-api": "^1.35.1",
+        "xml2js": "^0.4.19"
+    },
+    "devDependencies": {
+        "@types/jest": "^21.1.8",
+        "apidoc": "^0.17.6",
+        "docdash": "^0.4.0",
+        "gulp": "^3.9.1",
+        "gulp-markdown": "^1.2.0",
+        "gulp-typescript": "^3.2.3",
+        "jest": "^21.2.1",
+        "ts-jest": "^21.2.3"
+    }
+}

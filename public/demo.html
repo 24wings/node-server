@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./js/jq.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .animation {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background: #ccc;
+        }
+        
+        .animation-bg {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 4;
+        }
+        
+        .animation-si {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 5;
+        }
+        
+        .animation-btn {
+            width: 20%;
+            height: 50%;
+            left: 10%;
+            top: 50%;
+            margin-top: -40%;
+            background: #ccc;
+            z-index: 6;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="animation">
+        <audio id="jiao" autoplay="autoplay" src="images/music4.mp3"></audio>
+        <audio id="sijiao" autoplay="autoplay" src="images/music2.mp3"></audio>
+        <img src="./images/743984329654626229.jpg" alt="" class="animation-bg">
+        <img src="" alt="" class="animation-si">
+        <div class="animation-btn"></div>
+    </div>
+
+</body>
+
+<script>
+    // var height = $(window).height()
+    // var width = $(window).width()
+    // $(".animation").width(height).height(width)
+
+
+    var i = 0;
+    $(".animation-btn").click(() => {
+        var jiao = document.getElementById('jiao');
+        var sijiao = document.getElementById('sijiao');
+        jiao.play()
+        sijiao.play()
+
+        i++;
+        if (i % 2 == 0) {
+            $(".animation-si").attr("src", "./images/right1.2(1).gif")
+        } else {
+            $(".animation-si").attr("src", "./images/left1.2(1).gif")
+        }
+
+    })
+</script>
+
+
+</html>

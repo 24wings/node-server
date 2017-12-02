@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+</head>
+
+<body>
+    <input type="file" onchange="test(this.files[0])">
+
+    <script>
+        function test(file) {
+            var reader = new FileReader();
+            reader.onload = function(event) {
+                var image = event.target.result;
+                $.post('http://47.52.130.134/qq/qqai/faceMerge', {
+                    method: "POST",
+                    data: {
+                        image,
+                        model: 1
+                    },
+                    success: (rtn) => {
+                        console.log(rtn);
+                    }
+                });
+            }
+            reader.readAsDataURL(file);
+        }
+    </script>
+</body>
+
+</html>
+s
